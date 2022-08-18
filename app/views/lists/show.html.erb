@@ -1,25 +1,23 @@
-
+<div class="container">
   <div class="mb-3 mt-4">
-    <h2><%= @list.name %></h2>
+    <h2 class="text-center"><%= @list.name %></h2>
   </div>
 
-
-<div class="cards">
+  <div class="cards">
   <% @list.movies.each do |movie| %>
     <div class="card-movie">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <img src="https://media.senscritique.com/media/000020028869/300/wonder_woman_1984.jpg" />
       <div class="card-movie-infos">
-      <h2> <%= movie.title %> </h2>
-      <p><%=  movie.overview %></p>
-      <strong><%=  movie.rating %></strong>
+        <h2> <%= movie.title %> </h2>
+        <p><%=  movie.overview %></p>
+        <strong><%=  movie.rating %></strong>
+      </div>
     </div>
   <% end %>
+  </div>
+  <%# <li><%=  movie.poster_url %>
+
+  <ul>
+    <li><%= link_to "Back to list", lists_path %></li>
+  </ul>
 </div>
-<%# <li><%=  movie.poster_url %>
-
-
-
-<ul>
-  <li><%= link_to "Back to list", lists_path %></li>
-</ul>
-
