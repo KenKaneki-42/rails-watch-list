@@ -1,6 +1,6 @@
 class Movie < ApplicationRecord
   has_many :bookmarks
-
+  # has_many :lists, through: :bookmarks
   # title is unique
   # title cannot be blank
   validates :title, presence: true, uniqueness: true
