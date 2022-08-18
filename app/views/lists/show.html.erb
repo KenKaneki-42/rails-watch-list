@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="mb-3 mt-4">
+    <h2><%= @list.name %></h2>
+  </div>
+
+
+<div>
+  <ul>
+      <% @movies.each do |movie| %>
+      <li><%= link_to movie.poster_url, movie_path(movie) %></li>
+      <li><%= link_to movie.name, movie_path(movie) %></li>
+      <li><%= link_to movie.overview, movie_path(movie) %></li>
+      <li><%= link_to movie.rating, movie_path(movie) %></li>
+      <% end %>
+    </ul>
+</div>
+
+<div class="container">
+  <ul class="list-unstyled">
+    <li><%= "Add a movie to this list" %></li>
+    <h3 class="mb-3">Listing Movies</h3>
+    <div>
+      <ul>
+        <% @moviesforlist.each do |movie| %>
+        <li><%= movie.title %></li>
+        <% end %>
+      </ul>
+    </div>
+    <li><%= link_to "Back to list", lists_path %></li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<div class="container-md">
+  <h1 class="mb-3">Listing Lists</h1>
+  <div>
+    <ul>
+      <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <h1 class="mb-3">Listing Movies</h1>
+  <div>
+    <ul>
+      <% @movies.each do |movie| %>
+      <li><%= movie.title %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div>
+    <p><%= link_to "Add a new list", new_list_path %></p>
+  </div>
+</div>
