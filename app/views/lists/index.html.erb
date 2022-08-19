@@ -9,12 +9,15 @@
   </div>
 
   <h1 class="mb-3">Listing Movies</h1>
-  <div>
-    <ul>
+  <div class="cards">
       <% @movies.each do |movie| %>
-      <li><%= movie.title %></li>
+      <div class="card-movie">
+        <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg" %>
+        <div class="card-movie-infos">
+          <%= movie.title %>
+        </div>
+      </div>
       <% end %>
-    </ul>
   </div>
 
   <div>
